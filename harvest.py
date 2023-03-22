@@ -19,6 +19,9 @@ class MelonType:
         self.is_seedless = is_seedless
         self.is_bestseller = is_bestseller
 
+    def __repr__(self):
+        return f"<Melon Name: {self.name} Melon Code: {self.code}>"
+
     def add_pairing(self, pairing):
         """Add a food pairing to the instance's pairings list."""
 
@@ -72,12 +75,11 @@ def make_melon_type_lookup(melon_types):
 
     for names in melon_types:
         if names.code not in retval:
-            retval[names.code] = names #retval = {{code}: {melon}}
-
-        print(retval)
+            retval[names.code] = names 
     return retval
 
-print(make_melon_type_lookup(melon_types))
+#thing = make_melon_type_lookup(melon_types)
+#print(thing)
 
 
 ############
